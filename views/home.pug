@@ -1,0 +1,45 @@
+extends base.pug
+
+block scripts
+    script(src='/static/index.js')
+
+block style
+    style
+        include ../static/style.css
+
+block content
+    section#introSection
+        div.large Find Used Cars in Pakistan
+        div.small With thousands of cars, we have just the right one for you
+
+    section#missionSection
+        h2 Our Services
+        div.card
+            h3 Purchase Car
+            div.card-box
+                div.card-img
+                    img(src="/static/img/s.png")
+                div.card-content
+                    p Buy your desired beautiful car at good price easily
+        div.card
+            h3 Sell Your Car
+            div.card-box
+                div.card-img
+                    img(src="/static/img/s.png")
+                div.card-content
+                    p Safely sell your car at good prices
+        div.card
+            h3 Car Inspection
+            div.card-box
+                div.card-img
+                    img(src="/static/img/s.png")
+                div.card-content
+                    p Inspect the car either in buying or purchasing
+
+    section#sponsorsSection
+        h2 Our Sponsors
+        div#sponsors
+            img(src= "/static/img/audi.png", alt= "Sponsor Image", class= "spImage")
+            img(src= "/static/img/honda.png", alt= "Sponsor Image", class= "spImage")
+            img(src= "/static/img/toyota.png", alt= "Sponsor Image", class= "spImage")
+            img(src= "/static/img/mcds.png", alt= "Sponsor Image", class= "spImage")

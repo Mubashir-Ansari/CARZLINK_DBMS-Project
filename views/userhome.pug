@@ -1,0 +1,56 @@
+extends layout
+
+mixin message(opp, name)
+    if(opp)
+        h1.greeting Logged in as 
+            span=name 
+    else 
+        h1.greeting Welcome 
+            span=name 
+            |  to our website
+
+
+append links 
+    li(style="float: right;")
+        a(href="/loggout") Loggout 
+
+block style
+    style
+        include ../static/styleadd.css
+        include ../static/styleadd.css
+block content
+    .dashboard 
+        .user 
+            +message(opp, name)
+            h2 Sell your Car With Easy And Simple Steps!
+            h5 It's free and takes less than a minute
+            h1 PAKWHEELS
+            h2 Please Enter Your Details
+            form(action= "/userhome", method= "post", class= "myForm")
+                input(type="text", class= "myInput", name="plate", placeholder="Number Plate")
+                input(type="text", class= "myInput", name="city", placeholder="City")
+                input(type="text", class="myInput", name="make", placeholder="Make Company")
+                input(type="text", class="myInput", name="model", placeholder="Model Name")
+                input(type="number", class= "myInput", name="year", placeholder="Year")
+                input(type="number", class="myInput", name="mileage", placeholder="Mileage")
+                input(type="number", class="myInput", name="capacity", placeholder="Engine Capacity (cc)")
+                input(type="text", class="myInput", name="fuel", placeholder="Fuel")
+                input(type="text", class= "myInput", name="description", placeholder="Ad Description")
+                input(type="text", class= "myInput", name="image", placeholder="Image Link")
+                input(type="phone", class= "myInput", name="contact", placeholder="Mobile Number")
+                input(type="number", class= "myInput", name="price", placeholder="Price")
+                <label for="Transmission">Choose Transmission</label>
+                <select id="Transmission" name="Transmission" >
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+                </select>
+                <label for="color">Choose color</label>
+                <select id="color" name="color" >
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Silver">Silver</option>
+                <option value="Grey">Grey</option>
+                <option value="Other">Other</option>
+                </select>
+                button(class="btn")
+                    |   Submit

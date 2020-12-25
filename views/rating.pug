@@ -1,0 +1,23 @@
+extends layout
+
+block scripts
+    script(src='/static/index.js')
+
+block style
+    style
+        include ../static/style.css
+        include ../static/stylecontact.css
+
+block content
+    h1 WELCOME TO THE INSPECTION PAGE OF CARZLINK
+    h1 Please Fill This Form And Rate The Car
+    form(action= "/rating", method= "post", class= "myForm")
+        input(type="number", class= "myInput", name="workerr", placeholder="Worker ID")
+        input(type="number", class= "myInput", name="inspect", placeholder="Inspect ID")
+        input(type="number", class= "myInput", name="exterior", placeholder="Exterior")
+        input(type="number", class= "myInput", name="engine", placeholder="Engine")
+        input(type="number", class= "myInput", name="susp", placeholder="Suspension")
+        input(type="number", class= "myInput", name="brake", placeholder="Brakes")
+        input(type="number", class= "myInput", name="elec", placeholder="Electric")
+        button(class="btn")
+            |    Submit

@@ -1,0 +1,34 @@
+extends layout
+
+mixin message(opp, name)
+    if(opp)
+        h1.greeting Logged in as 
+            span=name 
+    else 
+        h1.greeting Welcome 
+            span=name 
+            |  to our website
+
+
+append links 
+    li(style="float: right;")
+        a(href="/loggout") Loggout 
+
+block style
+    style
+        include ../static/styleadd.css
+        include ../static/styleadd.css
+block content
+    .dashboard 
+        .user 
+            +message(opp, name)
+            h2 Thankyou For choosing Carzlink Inspection Service!!
+            form(action= "/inspect_details", method= "post", class= "myForm")
+                input(type="date", class= "myInput", name="datee", placeholder="ENTER DATE")
+                input(type="time", class="myInput", name="timee", placeholder="ENTER TIME")  
+                <select id="payment" name="payment" >
+                <option value="cash">CASH</option>
+                <option value="card">CREDIT CARD</option>
+                </select>
+                button(class="btn")
+                    |   Submit

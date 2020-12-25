@@ -1,0 +1,122 @@
+extends base.pug
+
+block scripts
+    script(src='/static/index.js')
+
+block style
+    style
+        include ../static/stylesearch.css
+block content
+    <center><div class='well'><b>Used Cars For Sale In Pakistan <p> #[a(href="/certified") Search Certified Cars]</div></center>
+    br
+    <div class='inside'><b>
+    form(action="/filtermake" method="post" )
+        table
+         h3 Search For
+            br
+            tr
+                td Make 
+                td 
+                    input(type="text" name="Make")
+            tr
+                td
+                td
+                    input(type="submit" value="Apply")
+    form(action="/filtercity" method="post" )
+        table
+         h3 Search For
+            br
+            tr
+                td City 
+                td 
+                    input(type="text" name="City")
+            tr
+                td
+                td
+                    input(type="submit" value="Apply")
+    form(action="/filteryear" method="post" )
+        table
+         h3 Search For
+            br
+            tr
+                td Year 
+                td 
+                    input(type="text" name="Year")
+            tr
+                td
+                td
+                    input(type="submit" value="Apply")
+    form(action="/filtertrans" method="post" )
+        table
+         h3 Search For
+            br
+            tr
+                td Transmission 
+                td 
+                    input(type="text" name="Transmission")
+            tr
+                td
+                td
+                    input(type="submit" value="Apply")
+    br
+    br
+    form(action="/filter" method="post" )
+        table
+         h2 Search All At Once
+            br
+            tr
+                td Make 
+                td 
+                    input(type="text" name="Make")
+            tr 
+                td Year 
+                td 
+                    input(type="text" name="Year")
+            tr
+                td City 
+                td 
+                    input(type="text" name="City")
+            tr
+                td Transmission
+                td 
+                    input(type="text" name="Transmission")
+            tr
+                td
+                td
+                    input(type="submit" value="Apply")
+    table(class='table table-striped')
+      thead
+       table(style='width:100%', border='1') 
+        tr
+            th Title 
+            th Make
+            th Model
+            th Year
+            th Fuel
+            th Transmission
+            th Color
+            th Mileage
+            th CC
+            th City
+            th Phone #
+            th Image
+        tr
+        each item in items ? items : []
+         tr
+         
+            td= item.heading
+            br
+            td=item.make
+            td=item.model
+            td=item.yearr
+            td=item.fuel
+            td=item.trans
+            td=item.color
+            td=item.mileage
+            td=item.capacity
+            td=item.city
+            td=item.phone
+            td(scope='row')
+                img(src=item.image alt='car' style='width:120px; height:100px; display:center; ')
+    </b>
+    </div>

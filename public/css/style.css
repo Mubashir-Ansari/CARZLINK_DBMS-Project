@@ -1,0 +1,226 @@
+* {padding: 0; margin: 0;}
+*{
+    /* color: rgba(207, 8, 8, 0.829); */
+    color: rgb(94, 94, 245);
+}
+body 
+{
+    /* background-color: rgb(163, 85, 85); */
+    background: url("/static/img/back3.jpg") ;
+    
+}
+.table, .table td, .table tr
+{
+
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.table
+{
+    background-color: grey;
+}
+nav
+{
+    background-color: silver;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+nav ul
+{
+    list-style: none;
+}
+
+nav ul li 
+{
+    display: inline;
+}
+nav ul li a 
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #444;
+    padding: 8px 20px;
+}
+nav ul li a:hover
+{
+    background-color: grey;
+}
+.page-wrapper
+{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.login-panel, .register-panel
+{
+    padding: 20px 20px 50px 20px;
+    border: 0.3px solid grey;
+    /* background-color: rgb(155, 129, 129); */
+}
+.login-panel
+{
+    float: left;
+}
+.register-panel
+{
+    float: right;
+}
+.image, .join-us-img
+{
+    display: block;
+    margin: 0 auto;
+}
+.image
+{
+    margin-bottom: 20px;
+}
+.join-us-img
+{    
+    width: 90%;   
+}
+input[type="text"], input[type="password"]
+{
+    padding: 8px 5px;
+    margin: 0 0 5px 5px;
+    min-width: 270px;
+    font-size: 1.05em;
+    background-color: #F5F5F5;
+    border: 1px solid #ccc;
+}
+input[type="submit"]
+{
+    float: right;
+    padding: 7px 20px;
+    font-size: 1.06em;
+    background-color: #0796cf;
+    color: #fff;
+    border: 1px solid #0285b9;
+    cursor: pointer;
+    margin-top: 4px;
+}
+input[type="text"]:focus , input[type="password"]:focus {
+    background-color:#fff;
+}
+input[type="submit"]:hover
+{
+    background-color: #0fa3dd;
+    border-color: 1px solid #098ec2;
+}
+.error
+{
+    background-color: rgb(248, 203, 203);
+    border: 1px solid rgb(245, 87, 87);
+    color: rgb(245, 49, 49);
+    padding: 10px 15px;
+}
+
+.dashboard
+{
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.user-post-area
+{
+    padding: 20px 0;
+}
+form
+{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+textarea
+{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    padding: 10px;
+    resize: vertical;   
+}
+
+.post 
+{
+    padding: 20px;
+    border: 1px solid #bbb;
+    color: #888;
+    margin-bottom: 5px;
+}
+p 
+{
+    padding: 10px;
+}
+.greeting
+{
+    color: #222;
+    background-color: rgb(245, 255, 245);
+    border: 1px solid rgb(210, 231, 210);
+    padding: 1em;
+}
+.greeting span
+{
+    color: rgb(112, 172, 16);
+}
+
+custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }

@@ -1,0 +1,29 @@
+extends layout
+
+mixin message(opp, name)
+    if(opp)
+        h1.greeting Logged in as 
+            span=name 
+    else 
+        h1.greeting Welcome 
+            span=name 
+            |  to our website
+
+block style
+    style
+        include ../static/styleadd.css
+        include ../static/styleadd.css
+block content
+    .dashboard 
+        .user 
+            +message(opp, name)
+            h2 welcome to Carzlink Inspection Service 
+            h5 Do you want our service
+            form(action= "/inspect_choice", method= "post", class= "myForm")
+                <label for="choice">WANT YOUR CAR INSPECTED OR NOT</label>
+                <select id="choice" name="choice" >
+                <option value="Yes">YES</option>
+                <option value="No">NO</option>
+                </select>
+                button(class="btn")
+                    |   Submit

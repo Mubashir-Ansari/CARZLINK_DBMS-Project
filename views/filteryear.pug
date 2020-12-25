@@ -1,0 +1,49 @@
+extends base.pug
+
+block scripts
+    script(src='/static/index.js')
+
+block style
+    style
+        include ../static/stylesearch.css
+block content
+    <center><div class='well'><b>Results after Filteration <p></div></center>
+    br
+    <div class='inside'><b>
+    form(action="/filtermake" method="post" )
+    table(class='table table-striped')
+      thead
+       table(style='width:100%', border='1') 
+        tr
+            th Title 
+            th Make
+            th Model
+            th Year
+            th Fuel
+            th Transmission
+            th Color
+            th Mileage
+            th CC
+            th City
+            th Phone #
+            th Image
+        tr
+        each item in items ? items : []
+         tr
+         
+            td= item.heading
+            br
+            td=item.make
+            td=item.model
+            td=item.yearr
+            td=item.fuel
+            td=item.trans
+            td=item.color
+            td=item.mileage
+            td=item.capacity
+            td=item.city
+            td=item.phone
+            td(scope='row')
+                img(src=item.image alt='car' style='width:120px; height:100px; display:center; ')
+    </b>
+    </div>

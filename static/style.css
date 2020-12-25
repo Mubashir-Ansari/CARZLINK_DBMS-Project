@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung|ZCOOL+QingKe+HuangYou&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+
+#logo{
+    display: flex;
+    /* color: rgb(63, 59, 59); */
+    color: white;
+    align-items: center;
+    margin: 0 14px;
+    font-size: 28px;
+    margin-right: 40px;
+}
+
+#logo img{
+height: 42px;
+    filter: invert(1);
+}
+
+
+#navbar{
+    background-color: #d43b3b;
+    padding: 18px 14px;
+    font-family: 'Yeon Sung' ;
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+#navbar li{
+    list-style: none;
+}
+
+#navbar li a{
+    /* color: rgb(63, 59, 59); */
+    /* float: right; */
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 13px 20px;
+}
+#navbar li add{
+    color:white;
+    background-color: rgb(129, 11, 30);
+    margin-left: 380px;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 13px 20px;
+}
+#navbar li add:hover{
+    color: grey;  
+}
+#navbar li a:hover{
+    color: grey;  
+}
+#introSection div.large {
+    padding: 20px;
+}
+
+#introSection{
+    padding-bottom: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    font-family: 'ZCOOL QingKe HuangYou';
+    font-size: 65px;
+    align-items: center;
+    background: center/cover no-repeat url("/static/bg.jpg") ;
+    height: 600px;
+    background-color: red;
+    padding: 15px;
+}
+#introSection div.small{
+    font-size: 25px;
+    padding: 5px;
+}
+
+
+#missionSection{
+    height: 326px;; 
+    width: 67%;
+    margin: auto;
+    
+}
+
+#missionSection h2{
+    font-size: 36px;
+    font-family: 'Yeon Sung' ;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.card{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 28%;
+    margin: 23px 20px;
+    height: 209px;
+}
+.card h3{
+    text-align: center;
+    margin: 0px 12px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-img{
+    height: 80px;
+    padding: 25 14px;
+    margin: 25px 14px;
+}
+
+.card-img img{
+    height: fit-content; 
+}
+
+.card-content{
+    padding: 0 10px;
+}
+
+.card-content p{
+    font-size: 19px;
+}
+#sponsorsSection{
+    height: 300px;
+    background-color: rgb(158, 147, 147);
+    
+}    
+
+#sponsorsSection h2{
+    font-size: 36px;
+    font-family: 'Yeon Sung' ;
+    text-align: center;
+    padding-top: 12px;
+}
+#sponsors{
+    height: 190px;
+    max-width: 1000px;
+    margin: 27px auto
+}
+
+.spImage{
+    height: 80%;
+    margin: 15px;
+}
+#footer{
+    background-color: white;
+    /* height: 60px; */
+    /* display:flex; */
+    /* color:white; */
+    justify-content: center;
+    align-items: center;
+    /* font-size: 20; */
+    /* font-family: 'Yeon Sung'; */
+
+
+}
+
+/* FOOTER */
+.panel-footer {
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    /* background-color: rgb(102, 99, 99); */
+    background-color: #d43b3b;
+    border-top: 0;
+  }
+  .panel-footer div.row {
+    margin-bottom: 35px;
+  }
+  #hours, #address {
+    line-height: 2;
+    color: #000;
+    font-size: 1.2em;
+  }
+  #hours > span, #address > span, #testimonials >span{
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+  } 
+  
+  #address p {
+    color: #56c417;
+    font-size: .8em;
+    line-height: 1.8;
+  }
+  #testimonials {
+    font-style: italic;
+    color: #000;
+    font-size: 1.1em;
+  }
+  
+  #testimonials p:nth-child(2) {
+    margin-top: 25px;
+  }
+  
+  /* END FOOTER */
